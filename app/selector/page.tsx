@@ -3,13 +3,13 @@ import Link from 'next/link';
 
 export default function SelectorPage() {
   const mockDatabase = [
-    { model: 'DTP-UL102', capacity: '120mAh', voltage: '3.7V', thickness: '0.8mm', type: 'Ultra-thin', crate: '1C' },
-    { model: 'DTP-HC50', capacity: '1500mAh', voltage: '3.7V', thickness: '4.5mm', type: 'High C-Rate', crate: '50C' },
-    { model: 'DTP-CV201', capacity: '240mAh', voltage: '3.8V', thickness: '2.1mm', type: 'Curved', crate: '2C' },
-    { model: 'DTP-IN400', capacity: '4000mAh', voltage: '3.2V', thickness: '8.0mm', type: 'LiFePO4', crate: '3C' },
-    { model: 'DTP-HC30', capacity: '850mAh', voltage: '3.7V', thickness: '5.2mm', type: 'High C-Rate', crate: '30C' },
-    { model: 'DTP-UL088', capacity: '90mAh', voltage: '3.8V', thickness: '0.6mm', type: 'Ultra-thin', crate: '0.5C' },
-    { model: 'DTP-CM30', capacity: '3000mAh', voltage: '7.4V', thickness: '12.0mm', type: 'Custom Pack', crate: '5C' },
+    { model: 'TOM-UL102', capacity: '120mAh', voltage: '3.7V', thickness: '0.8mm', type: 'Ultra-thin', crate: '1C' },
+    { model: 'TOM-HC50', capacity: '1500mAh', voltage: '3.7V', thickness: '4.5mm', type: 'High C-Rate', crate: '50C' },
+    { model: 'TOM-CV201', capacity: '240mAh', voltage: '3.8V', thickness: '2.1mm', type: 'Curved', crate: '2C' },
+    { model: 'TOM-IN400', capacity: '4000mAh', voltage: '3.2V', thickness: '8.0mm', type: 'LiFePO4', crate: '3C' },
+    { model: 'TOM-HC30', capacity: '850mAh', voltage: '3.7V', thickness: '5.2mm', type: 'High C-Rate', crate: '30C' },
+    { model: 'TOM-UL088', capacity: '90mAh', voltage: '3.8V', thickness: '0.6mm', type: 'Ultra-thin', crate: '0.5C' },
+    { model: 'TOM-CM30', capacity: '3000mAh', voltage: '7.4V', thickness: '12.0mm', type: 'Custom Pack', crate: '5C' },
   ];
 
   return (
