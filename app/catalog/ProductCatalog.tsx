@@ -1,19 +1,17 @@
 import React from 'react';
 import HeroSlider from '@/components/HeroSlider';
 import { Outfit, JetBrains_Mono } from 'next/font/google';
+import { createClient } from '@/lib/supabase/server';
 
 const outfit = Outfit({ subsets: ['latin'], weight: ['300', '400', '600', '800'] });
 const jetbrains = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '700'] });
 
-export default function ProductCatalog() {
-   const products = [
-      { id: 1, name: 'TOM-XR High Drain', type: 'Lithium-Ion', capacity: '12,000 mAh', voltage: '3.7V', status: 'In Production' },
-      { id: 2, name: 'TOM-MT Standard', type: 'Li-Po', capacity: '8,000 mAh', voltage: '7.4V', status: 'In Production' },
-      { id: 3, name: 'TOM-LT Cold Temp', type: 'LiFePO4', capacity: '10,000 mAh', voltage: '3.2V', status: 'Special Order' },
-      { id: 4, name: 'TOM-EV Traction', type: 'Lithium-Ion', capacity: '50,000 mAh', voltage: '48V', status: 'In Production' },
-      { id: 5, name: 'TOM-MC Medical', type: 'Li-Po', capacity: '5,000 mAh', voltage: '3.7V', status: 'Certified' },
-      { id: 6, name: 'TOM-Aero Light', type: 'Lithium-Ion', capacity: '20,000 mAh', voltage: '24V', status: 'In Production' },
-   ];
+export default async function ProductCatalog() {
+   const supabase = await createClient();
+   const { data: products = [] } = await supabase
+      .from('products')
+      .select('id, name, type, capacity, voltage, status')
+      .order('id');
 
    return (
       <div className={`min-h-screen bg-[#fafbfc] text-[#0a0d14] antialiased pb-24 overflow-x-hidden ${outfit.className}`}>
