@@ -149,7 +149,7 @@ export default function Dashboard() {
                    <span className="text-[0.65rem] font-bold uppercase tracking-widest text-[#424752]">Cycle Life</span>
                  </div>
                  <div className="bg-white px-4 py-3 w-3/5">
-                   <span className="text-sm font-semibold text-[#191c1e]">> 500 Cycles</span>
+                   <span className="text-sm font-semibold text-[#191c1e]">{">"} 500 Cycles</span>
                  </div>
                </div>
 
